@@ -13,7 +13,7 @@ from django.contrib.auth.models import User
 # through Django's Object-Relational-Mapping system, or ORM.
 
 class Item(models.Model):
-    name = models.CharField(max_length=255)
+    name = models.CharField(max_length=255, unique=True)
     availability = models.PositiveIntegerField(default=1)
     item_type = models.CharField(max_length=100)
     description = models.TextField()
