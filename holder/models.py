@@ -83,7 +83,7 @@ class Hold(models.Model):
     def place_holds(self, cart):
         '''Will create Hold objects for each CartItem object in a Cart'''
         
-
+        
 
     def __str__(self):
         '''Returns a string representation of the hold'''
