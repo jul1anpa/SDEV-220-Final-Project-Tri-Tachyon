@@ -1,0 +1,93 @@
+/* Header styles */
+
+.page-header {
+    background-color: whitesmoke;
+    margin-bottom: 40px;
+    padding: 20px 20px 20px 40px;
+    gap: 10px;
+}
+.logo {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 80px;
+    width: 100px;
+    z-index: 2;
+    padding: 16px;
+}
+.nav-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #b1d49f;
+    padding: 10px 0;
+    display: flex;
+    justify-content: flex-end;
+    list-style-type: none;
+    z-index: 1;
+}
+.nav-bar li {
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 20px;
+}
+.page {
+    color: whitesmoke;;
+}
+.cart {
+    color: whitesmoke;
+}
+
+/* Book card styles*/
+
+.book-card {
+    background-color: whitesmoke;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    margin-left: 30px;
+    margin-right: 30px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: auto auto auto;
+    gap: 10px;
+    align-items: center;
+
+}
+.image {
+    height: 240px;
+    width: 175px;
+    grid-row: 2;
+    grid-column: 1;
+}
+.title {
+    grid-row: 1;
+    grid-column: 1;
+}
+.author {
+    grid-row: 1;
+    grid-column: 2;
+}
+.description {
+    grid-row: 2;
+    grid-column: 2;
+}
+
+/* Body styles */
+
+body {
+    font-family: "Montserrat", sans-serif;
+  }
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+/* Main styles */
+
+.content {
+    padding-top: 20px;
+}
