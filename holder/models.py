@@ -1,4 +1,5 @@
 from django.db import models
+from django.utils import timezone
 
 # Create your models here.
 
@@ -10,6 +11,8 @@ class Item(models.Model):
     item_type = models.CharField(max_length=25, null=False)
     author = models.CharField(max_length=50)
     description = models.TextField()
+    created_date = models.DateTimeField(default=timezone.now)
+    image = models.ImageField(upload_to='images/', null=True)
 
     def is_available(self, quantity=1):
         '''Will return a boolean indicating whether there is enough stock'''

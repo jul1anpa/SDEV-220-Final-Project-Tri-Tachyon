@@ -7,7 +7,35 @@
     </head>
 
     <body>
-        <!-- Your content goes here -->
+        <header>
+            <h1><a href='/'>Indianapolis Public Library</a></h1>
+            <nav>
+                <ul>
+                    <li>Home</li>
+                    <li><a href='cart/'>Cart</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+            {% for item in items %}
+                <article>
+                    <h2><a href=''>{{ item.name }}</a></h2>
+                    <h3>{{ item.author }}</h3>
+                    <img src="{{ item.image.url }}" alt="{{ item.name }}">
+                    <p>{{ item.description }}</p>
+                    <p>In stock: {{ item.stock }}</p>
+                    <form method="POST" action="{% url 'add_to_cart' item.id %}">
+                        <input type="number" name="quantity" value="1" min="1" max="{{ item.stock }}">
+                        <input type="submit" value="Add to Cart">
+                    </form>
+                </article>
+            {% endfor %}
+        </main>
+
+        <footer>
+
+        </footer>
     </body>
 
 </html>
