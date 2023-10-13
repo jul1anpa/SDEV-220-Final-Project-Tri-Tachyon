@@ -1,5 +1,6 @@
 from django.db import models
 from django.utils import timezone
+from django.contrib.auth.models import AbstractUser
 
 # Create your models here.
 
@@ -25,9 +26,10 @@ class Item(models.Model):
         return self.name
 
 
-
 class Cart(models.Model):
     '''Represents a Cart data object that stores CartItem object's in an items attribute'''
+
+    cart_id = models.CharField(max_length=100, unique=True, default='')
 
     items = models.ManyToManyField(Item, through='CartItem')
 
