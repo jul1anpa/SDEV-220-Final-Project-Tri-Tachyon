@@ -5,7 +5,7 @@
             <h2 class="title"><a href=''>{{ item.name }}</a></h2>
             <h3 class="author">{{ item.author }}</h3>
             <img class="image" src="{{ item.image.url }}" alt="{{ item.name }}">
-            <p class="description">{{ item.description }}</p>
+            <p class="description">{{ item.description|linebreaksbr }}</p>
             <p>In stock: {{ item.stock }}</p>
             <form method="POST" action="{% url 'add_to_cart' item.id %}">
                 <input type="number" name="quantity" value="1" min="1" max="{{ item.stock }}">
