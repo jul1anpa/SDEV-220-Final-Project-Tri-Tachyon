@@ -28,10 +28,9 @@ These include:
 - __Cart__ (attributes: session_key, items)
 - __CartItem__ (attributes: cart, item, quantity)
 - __Hold__ (attributes: item, quantity, timestamp, is_active)
-
-
-
-
+  
+  
+  
 To begin, you should populate the database with Item objects so that there is a catalog to choose from.  
 While your server is running, navigate to the admin/ url and login to the admin interface using your credentials.  
 From here you create new Item objects that will appear in the user interface.  
