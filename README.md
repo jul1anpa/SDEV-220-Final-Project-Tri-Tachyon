@@ -2,7 +2,7 @@
 _This repository stores all files related to the SDEV 220 Group 3 project._
 
 
-### Description:
+### Description
 This repository provides the framework for a library hold system application utilizing Django in Python.  
 This application allows a user to replicate an online library using the Object-Relational Mapping component of Django.
 
