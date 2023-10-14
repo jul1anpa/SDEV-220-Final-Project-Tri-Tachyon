@@ -4,7 +4,7 @@ from .models import Item, Cart, CartItem, Hold
 from django.shortcuts import get_object_or_404
 from django.db import transaction
 
-# Create your views here.
+
 
 def item_list(request):
     items = Item.objects.filter(created_date__lte=timezone.now()).order_by('created_date')
@@ -23,6 +23,7 @@ def cart_list(request):
             return render(request, 'holder/cart.html')
     else:
         return render(request, 'holder/cart.html')
+
 
 
 def add_to_cart(request, item_id):
@@ -47,6 +48,7 @@ def add_to_cart(request, item_id):
         return redirect('cart_list')  
     else:
         return redirect('item_list')
+
 
 
 def place_holds(request, cart_id):
