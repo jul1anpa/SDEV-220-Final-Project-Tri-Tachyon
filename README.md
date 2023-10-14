@@ -24,13 +24,13 @@ This application allows a user to replicate an online library using the Object-R
 The system uses four custom model types defined in models.py to replicate an online libary
 These include:
 - __Item__ (attributes: name, stock, item_type, author, description, created_date, image  
-
         methods: is_available  
-
 )
 - __Cart__ (attributes: session_key, items)
 - __CartItem__ (attributes: cart, item, quantity)
 - __Hold__ (attributes: item, quantity, timestamp, is_active)
+
+
 
 
 To begin, you should populate the database with Item objects so that there is a catalog to choose from.  
