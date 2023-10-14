@@ -1,4 +1,4 @@
-# Library Hold System Mockup
+# Library Hold System Mockup Documentation
 _This repository stores all files related to the SDEV 220 Group 3 project._
 
 
