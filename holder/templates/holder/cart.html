@@ -1,0 +1,22 @@
+{% extends 'holder/base.html' %}
+{% block content %}
+<h1>Your Cart</h1>
+{% if cart_items %}
+    <article class="cart-card">
+            {% for cart_item in cart_items %}
+                <ul>
+                    <li class="cart-image"><img src="{{ cart_item.item.image.url }}" alt="{{ cart_item.item.name }}"></li>
+                    <li class="name">{{ cart_item.item.name }}</li>
+                    <li class="type">Type: {{ cart_item.item.item_type }}</li>
+                    <li class="quantity">Quantity: {{ cart_item.quantity }}</li>
+                </ul>
+            {% endfor %}
+    </article>
+<h1>Total: {{ total_quantity }} items</h1>
+<form style="padding-left: 30px;" method="POST" action="{% url 'place_holds' cart.id %}">
+    {% csrf_token %}
+    <input type="submit" value="Checkout">
+{% else %}
+    <p style="padding-left: 30px;">You have not added anything to your cart!</p>
+{% endif %}
+{% endblock %}

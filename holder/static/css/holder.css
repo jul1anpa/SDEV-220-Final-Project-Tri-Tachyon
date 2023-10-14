@@ -39,6 +39,46 @@
     color: whitesmoke;
 }
 
+/* Cart styles */
+
+.cart-card {
+    background-color: whitesmoke;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    margin-left: 30px;
+    margin-right: 30px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    gap: 10px;
+    align-items: center;
+}
+li {
+    list-style-type: none;
+}
+.name {
+    grid-row: 1;
+    grid-column: 1;
+}
+.type {
+    grid-row: 2;
+    grid-column: 1;
+}
+.cart-image {
+    grid-row: 1;
+    grid-column: 2;
+}
+.cart-image img {
+    height: 120px;
+    width: 87.5px;
+}
+.quantity {
+    grid-row: 2;
+    grid-column: 2;
+}
+
 /* Book card styles*/
 
 .book-card {
@@ -90,4 +130,9 @@ a {
 
 .content {
     padding-top: 20px;
+}
+h1 {
+    padding-top: 20px;
+    padding-bottom: 0px;
+    padding-left: 30px;
 }
