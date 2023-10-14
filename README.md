@@ -21,13 +21,26 @@ This application allows a user to replicate an online library using the Object-R
 
 ### Usage
 The system uses four custom model types defined in models.py to replicate an online libary  
-These include:  
+These include: 
+
+
 - __Item__ (attributes: [name, stock, item_type, author, description, created_date, image]  
-        methods: is_available  
-)
-- __Cart__ (attributes: session_key, items)
-- __CartItem__ (attributes: cart, item, quantity)
-- __Hold__ (attributes: item, quantity, timestamp, is_active)
+        methods: is_available)  
+The Item model represents a book, DVD, etc. that a user could add to their cart and place a hold on.  
+_Item objects can be created and managed via the admin interface_
+
+
+- __Cart__ (attributes: session_key, items)  
+The Cart model represents a cart that stores items a user has placed inside of it. When a cart gets added to for the first time, a new Cart object is created. The Cart object stores a user's session key which will associate the Cart object with that specific user.  
+
+
+- __CartItem__ (attributes: cart, item, quantity)  
+The CartItem model represents an item that has been added to a cart. When an Item object is added to a cart, a new CartItem object is created. The CartItem object associates itself with the Item object via a foreign key upon construction.  
+
+
+- __Hold__ (attributes: item, quantity, timestamp, is_active)  
+The Hold model represents a cart item that has been checked out. Upon checkout with a Cart object, new Hold objects are created that are constructed based on the CartItem's associated with the Cart.   _Hold objects can be accessed using the admin interface_  
+
   
   
   

@@ -133,7 +133,3 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 SESSION_ENGINE = 'django.contrib.sessions.backends.signed_cookies'
 SESSION_COOKIE_AGE = 1800
-
-# Admin login credentials
-# Username: tachyon
-# Password: sdev220project
