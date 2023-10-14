@@ -48,7 +48,7 @@ _Hold objects can be accessed using the admin interface_
 To begin, you should populate the database with Item objects so that there is a catalog to choose from.  
 While your server is running, navigate to the admin/ url and login to the admin interface using your credentials.  
 From here you can create new Item objects that will appear in the user interface.  
-You'll notice there is also an option to view existing Holds from the admin interface.  
+(You'll notice there is also an option to view existing Holds from the admin interface.)  
 Once you populate your database with Items you can then view them by visiting the port url of your server.  
 You should now see your Items listed in the catalog!  
 You are now free to create a new Cart by adding Items to it, view the CartItems within the Cart, and place Holds on each CartItem upon checkout. 
