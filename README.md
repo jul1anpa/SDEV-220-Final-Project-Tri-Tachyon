@@ -6,7 +6,7 @@ This repository provides the framework for a library hold system application uti
 This application allows a user to replicate an online library using the Object-Relational Mapping component of Django.
 
 ### Installation instructions (e.g., requirements, setup)
-__Requirements: Python version>=3.6, Django experience__
+*__Requirements: Python version>=3.6, Django experience__*
 1. After cloning the repository, open the root directory of the project in your coding environment
 2. Open terminal and navigate to the project's root directory
 3. Create and activate a virtual environment within the root directory
