@@ -20,12 +20,12 @@ __Requirements: Python version>=3.6, Django experience__
 ### Usage
 The system uses four custom model types defined in models.py to replicate an online libary
 These include:
-__-->__ Item (attributes: name, stock, item_type, author, description, created_date, image
+__-__ Item (attributes: name, stock, item_type, author, description, created_date, image
         methods: is_available
 )
-__-->__ Cart (attributes: session_key, items)
-__-->__ CartItem (attributes: cart, item, quantity)
-__-->__ Hold (attributes: item, quantity, timestamp, is_active)
+__-__ Cart (attributes: session_key, items)
+__-__ CartItem (attributes: cart, item, quantity)
+__-__ Hold (attributes: item, quantity, timestamp, is_active)
 
 
 
