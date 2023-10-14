@@ -1,18 +1,22 @@
 {% extends 'holder/base.html' %}
 {% block content %}
 <h1>Catalog</h1>
-    {% for item in items %}
-        <article class="book-card">
-            <h2 class="title"><a href=''>{{ item.name }}</a></h2>
-            <h3 class="author">{{ item.author }}</h3>
-            <img class="image" src="{{ item.image.url }}" alt="{{ item.name }}">
-            <p class="description">{{ item.description|linebreaksbr }}</p>
-            <p>In stock: {{ item.stock }}</p>
-            <form method="POST" action="{% url 'add_to_cart' item.id %}">
-                {% csrf_token %}
-                <input type="number" name="quantity" value="1" min="1" max="{{ item.stock }}">
-                <input type="submit" value="Add to Cart">
-            </form>
-        </article>
-    {% endfor %}
+    {% if items %}
+        {% for item in items %}
+            <article class="book-card">
+                <h2 class="title"><a href=''>{{ item.name }}</a></h2>
+                <h3 class="author">{{ item.author }}</h3>
+                <img class="image" src="{{ item.image.url }}" alt="{{ item.name }}">
+                <p class="description">{{ item.description|linebreaksbr }}</p>
+                <p>In stock: {{ item.stock }}</p>
+                <form method="POST" action="{% url 'add_to_cart' item.id %}">
+                    {% csrf_token %}
+                    <input type="number" name="quantity" value="1" min="1" max="{{ item.stock }}">
+                    <input type="submit" value="Add to Cart">
+                </form>
+            </article>
+        {% endfor %}
+    {% else %}
+        <p style="padding-left: 30px;">There are no Items in your database!</p>
+    {% endif %}
 {% endblock %}
