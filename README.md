@@ -13,7 +13,7 @@ This application allows a user to replicate an online library using the Object-R
 2. Open terminal and navigate to the project's root directory
 3. Create and activate a virtual environment within the root directory
 4. pip install -r requirements.txt
-5. Use the migrate command to create your database
+5. Use the migrate command to create your database (This is not required if you would like to use the prepopulated database. If you would like to create your own database, please delete the current db.sqlite3 file located in the directory)
 6. Create a superuser (to access the admin interface) using the createsuperuser command
 7. Run a development server on your machine using the runserver command
 8. Get ready to create a virtual library (no real books, sadly.)
@@ -40,15 +40,12 @@ The CartItem model represents an item that has been added to a cart. When an Ite
 
 - __Hold__ (attributes: item, quantity, timestamp, is_active)  
 The Hold model represents a cart item that has been checked out. Upon checkout with a Cart object, new Hold objects are created that are constructed based on the CartItem's associated with the Cart.
-_Hold objects can be accessed using the admin interface_  
+_Hold objects can be accessed using the admin interface_
 
+__The framework comes with a prepopulated database, but if you would like to create your own Items please follow the steps below:__  
   
-  
-  
-To begin, you should populate the database with Item objects so that there is a catalog to choose from.  
-While your server is running, navigate to the admin/ url and login to the admin interface using your credentials.  
-From here you can create new Item objects that will appear in the user interface.  
-(You'll notice there is also an option to view existing Holds from the admin interface.)  
-Once you populate your database with Items you can then view them by visiting the port url of your server.  
-You should now see your Items listed in the catalog!  
-You are now free to create a new Cart by adding Items to it, view the CartItems within the Cart, and place Holds on each CartItem upon checkout. 
+1. While your server is running, navigate to the admin/ url and login to the admin interface using your credentials.
+2. From here you can create new Item objects that will appear in the user interface.
+_(You'll notice there is also an option to view existing Holds from the admin interface.)_
+3. Once you create a new Item you can then view it by visiting the port url of your server.
+4. You should now see your newly created Items listed in the catalog!
