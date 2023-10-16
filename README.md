@@ -16,6 +16,7 @@ This application allows a user to replicate an online library using the Object-R
 5. Use the migrate command to create your database _(This is not required if you would like to use the prepopulated database. If you would like to create your own database, please delete the current db.sqlite3 file located in the directory)_
 6. Create a superuser (to access the admin interface) using the createsuperuser command
 7. Run a development server on your machine using the runserver command
+    python manage.py runserver
 8. Get ready to create a virtual library (no real books, sadly.)
 
 
