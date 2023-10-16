@@ -4,7 +4,7 @@
     {% if items %}
         {% for item in items %}
             <article class="book-card">
-                <h2 class="title"><a href=''>{{ item.name }}</a></h2>
+                <h2 class="title">{{ item.name }}</h2>
                 <h3 class="author">{{ item.author }}</h3>
                 <img class="image" src="{{ item.image.url }}" alt="{{ item.name }}">
                 <p class="description">{{ item.description|linebreaksbr }}</p>

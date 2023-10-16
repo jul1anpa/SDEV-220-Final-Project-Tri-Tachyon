@@ -8,9 +8,6 @@ __pycache__
 myvenv/
 venv/
 
-# Database
-db.sqlite3
-
 # macOS
 ._*
 .DS_Store
