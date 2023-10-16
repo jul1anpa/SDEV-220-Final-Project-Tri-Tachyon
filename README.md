@@ -17,9 +17,9 @@ This application allows a user to replicate an online library using the Object-R
 6. Create a superuser (to access the admin interface) using the createsuperuser command
 7. Run a development server on your machine using the runserver command
 
-'''python
+```python
 python manage.py runserver
-'''
+```
 
 9. Get ready to create a virtual library (no real books, sadly.)
 
