@@ -13,32 +13,32 @@ This application allows a user to replicate an online library using the Object-R
 2. Open terminal and navigate to the project's root directory
 3. Create and activate a virtual environment within the root directory
 
-```python
+```
 python -m venv <insert_name_of_virtual_environment_here>
 ```
 
 4. Activate the virtual environment
 5. Install the required packages using pip
 
-```python
+```
 pip install -r requirements.txt
 ```
 
 6. Use the migrate command to create your database _(This is not required if you would like to use the prepopulated database. If you would like to create your own database, please delete the current db.sqlite3 file located in the directory)_
 
-```python
+```
 python manage.py migrate
 ```
 
 7. Create a superuser (to access the admin interface) using the createsuperuser command
 
-```python
+```
 python manage.py createsuperuser
 ```
 
 8. Run a development server on your machine using the runserver command
 
-```python
+```
 python manage.py runserver
 ```
 
